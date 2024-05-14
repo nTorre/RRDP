@@ -1,0 +1,49 @@
+[package]
+name = "torre_rdp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+xcap = "0.0.8"
+image = "0.25.1"
+rayon = "1.10.0"
+scrap = "0.5.0"
+tokio = "1.37.0"
+mini-redis= "0.4.1"
+quinn = "0.10.2"
+anyhow = "1.0.81"
+rustls-pemfile = "1.0.4"
+rustls = { version = "*", features = ["dangerous_configuration", "quic"] }
+time = "0.3.36"
+x11rb = "0.13.0"
+eframe = "0.27.2"
+egui = "0.27.2"
+egui_extras = "0.27.2"
+env_logger = "0.11.3"
+
+# generation
+rcgen = "0.13.1"
+ring = "0.17.8"
+
+# parsing
+toml = "0.8.12"
+serde = { version = "1.0.200", features = ["derive"]}
+
+# logging
+log = "0.4.21"
+chrono = "0.4.37"
+fern = "0.6.2"
+pem = "3.0.4"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+pam = "0.8.0"
+
+[[bin]]
+name = "client"
+path = "src/client/main.rs"
+
+[[bin]]
+name = "server"
+path = "src/server/main.rs"
