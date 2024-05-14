@@ -97,9 +97,6 @@ pub async fn send_image(mut send: &mut SendStream) -> Result<(), ConnectionError
 
         // Save the screenshot to a file
         let img = DynamicImage::from(get_image(&conn, screen).await.unwrap());
-        let mut output = Vec::new();
-        img.write_to(&mut output, Jpeg(50))?;
-
 
         if let Err(e) = send.write_all(img.as_bytes()).await {
             return Err(ConnectionError::SendingError(e.to_string()))
@@ -148,8 +145,6 @@ async fn get_image(conn: &RustConnection, screen: &Screen) -> Result<DynamicImag
     let buffer = image.data;
     let img: ImageBuffer<image::Rgba<u8>, Vec<u8>> = ImageBuffer::from_raw(screen.width_in_pixels as u32, screen.height_in_pixels as u32, buffer).unwrap();
     let img = DynamicImage::from(img);
-
-    let mut cursor = Cursor::default();
 
     Ok(img)
 }
