@@ -2,6 +2,7 @@ mod cryptography;
 mod gui;
 
 use std::{error::Error, net::SocketAddr, sync::Arc};
+use std::time::Instant;
 use image::{ImageBuffer, Rgba, RgbaImage};
 use quinn::{ConnectionError, Endpoint, RecvStream, SendStream};
 use tokio::runtime::Runtime;
@@ -54,7 +55,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 
 async fn run_client(server_addr: SocketAddr, state: Arc<Mutex<SharedState>>) -> Result<(), Box<dyn Error>> {
-    let mut endpoint = Endpoint::client("127.0.0.1:0".parse().unwrap())?;
+    let mut endpoint = Endpoint::client("0.0.0.0:0".parse().unwrap())?;
     endpoint.set_default_client_config(configure_client());
 
     // connect to server
@@ -111,6 +112,8 @@ async fn run_client(server_addr: SocketAddr, state: Arc<Mutex<SharedState>>) -> 
     // }
 
     let mut i=0;
+    let mut fps_time = Instant::now();
+
     loop{
         let mut buf = [0u8; 100_000];
         let n = recv.read(&mut buf).await;
@@ -120,7 +123,13 @@ async fn run_client(server_addr: SocketAddr, state: Arc<Mutex<SharedState>>) -> 
                 for &item in &buf[..num] {
                     img_vec.push(item);
                     if img_vec.len() == 3145728{
-                        println!("Img: {}", i);
+                        if i % 10 == 0{
+                            let secs = fps_time.elapsed().as_millis() as f64 / 1000.0;
+                            println!("fps: {}", i as f64/secs);
+                            i=0;
+                            fps_time = Instant::now();
+                        }
+                        // println!("Img: {}", i);
                         i+=1;
                         let img_res: Option<ImageBuffer<Rgba<u8>, &[u8]>> = ImageBuffer::from_raw(1024, 768, &*img_vec);
                         match img_res {

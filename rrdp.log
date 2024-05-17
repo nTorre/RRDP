@@ -675,3 +675,934 @@ max_slice_size = 0
 not implemented
 ---------------------------
 [2024-05-14][15:49:22][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:20:41][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:20:41][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:20:41][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:21:38][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:21:38][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:21:38][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:35:14][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:35:14][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:35:14][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:36:55][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:36:55][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:36:55][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:44:11][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:44:11][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:44:11][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:46:18][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:46:18][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:46:18][server::cryptography][INFO] Generating certificates
+[2024-05-14][17:53:05][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][17:53:05][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][17:53:05][server::cryptography][INFO] Generating certificates
+[2024-05-14][22:17:53][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-14][22:17:53][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-14][22:17:53][server::cryptography][INFO] Generating certificates
+[2024-05-15][16:53:42][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-15][16:53:42][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-15][16:53:42][server::cryptography][INFO] Generating certificates
+[2024-05-15][16:58:39][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-15][16:58:39][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-15][16:58:39][server::cryptography][INFO] Generating certificates
+[2024-05-15][17:06:04][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-15][17:06:04][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-15][17:06:04][server::cryptography][INFO] Generating certificates
+[2024-05-15][17:32:17][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-15][17:32:17][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-15][17:32:17][server::cryptography][INFO] Generating certificates
+[2024-05-16][12:39:19][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][12:39:19][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][12:39:19][server::cryptography][INFO] Generating certificates
+[2024-05-16][13:35:55][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][13:35:55][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][13:35:55][server::cryptography][INFO] Generating certificates
+[2024-05-16][14:09:24][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][14:09:24][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][14:09:24][server::cryptography][INFO] Generating certificates
+[2024-05-16][14:14:38][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][14:14:38][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][14:14:38][server::cryptography][INFO] Generating certificates
+[2024-05-16][14:16:49][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][14:16:49][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][14:16:49][server::cryptography][INFO] Generating certificates
+[2024-05-16][14:17:05][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][14:17:05][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][14:17:05][server::cryptography][INFO] Generating certificates
+[2024-05-16][14:20:02][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][14:20:02][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][14:20:02][server::cryptography][INFO] Generating certificates
+[2024-05-16][14:39:16][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][14:39:16][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][14:39:16][server::cryptography][INFO] Generating certificates
+[2024-05-16][15:19:04][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][15:19:04][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][15:19:04][server::cryptography][INFO] Generating certificates
+[2024-05-16][15:19:48][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][15:19:48][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][15:19:48][server::cryptography][INFO] Generating certificates
+[2024-05-16][15:26:06][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][15:26:06][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][15:26:06][server::cryptography][INFO] Generating certificates
+[2024-05-16][15:42:20][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][15:42:20][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][15:42:20][server::cryptography][INFO] Generating certificates
+[2024-05-16][15:47:04][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][15:47:04][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][15:47:04][server::cryptography][INFO] Generating certificates
+[2024-05-16][15:47:34][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][15:47:34][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][15:47:34][server::cryptography][INFO] Generating certificates
+[2024-05-16][16:04:44][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][16:04:44][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][16:04:44][server::cryptography][INFO] Generating certificates
+[2024-05-16][16:05:23][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][16:05:23][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][16:05:23][server::cryptography][INFO] Generating certificates
+[2024-05-16][16:10:36][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][16:10:36][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][16:10:36][server::cryptography][INFO] Generating certificates
+[2024-05-16][16:10:54][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][16:10:54][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][16:10:54][server::cryptography][INFO] Generating certificates
+[2024-05-16][16:10:56][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][16:10:56][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][16:10:56][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:13:24][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:13:24][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:13:24][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:38:32][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:38:32][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:38:32][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:46:49][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:46:49][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:46:49][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:47:31][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:47:31][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:47:31][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:49:33][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:49:33][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:49:33][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:49:55][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:49:55][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:49:55][server::cryptography][INFO] Generating certificates
+[2024-05-16][17:56:10][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-16][17:56:10][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-16][17:56:10][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:23:09][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:23:09][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:23:09][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:23:41][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:23:41][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:23:41][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:27:20][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:27:20][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:27:20][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:27:44][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:27:44][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:27:44][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:40:22][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:40:22][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:40:22][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:40:41][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:40:41][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:40:41][server::cryptography][INFO] Generating certificates
+[2024-05-17][10:41:41][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][10:41:41][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][10:41:41][server::cryptography][INFO] Generating certificates
+[2024-05-17][11:10:35][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][11:10:35][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][11:10:35][server::cryptography][INFO] Generating certificates
+[2024-05-17][11:19:55][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][11:19:55][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][11:19:55][server::cryptography][INFO] Generating certificates
+[2024-05-17][11:55:53][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][11:55:53][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][11:55:53][server::cryptography][INFO] Generating certificates
+[2024-05-17][11:59:36][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-05-17][11:59:36][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-05-17][11:59:36][server::cryptography][INFO] Generating certificates

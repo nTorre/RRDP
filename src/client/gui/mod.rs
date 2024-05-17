@@ -2,6 +2,7 @@
 #![allow(rustdoc::missing_crate_level_docs)] // it's an example
 
 use eframe::egui;
+use eframe::emath::Pos2;
 use image::RgbaImage;
 use tokio::sync::mpsc::Receiver;
 
@@ -40,6 +41,12 @@ impl MyApp{
 
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+        let input = ctx.input((|i| i.pointer.interact_pos()));
+        match input {
+            Some(pos)=> println!("{:?}", pos),
+            _ => {}
+        }
+
         egui::CentralPanel::default().show(ctx, |ui| {
             egui::ScrollArea::both().show(ui, |ui| {
                 if let Ok(image) = self.image_rx.try_recv() {
