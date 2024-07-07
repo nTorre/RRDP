@@ -1,144 +1,173 @@
+use std::future::Future;
+use std::pin::Pin;
 use std::time::Duration;
-use quinn::Connection;
-use image::io::Reader as ImageReader;
-use image::{DynamicImage, ImageBuffer};
-use x11rb::connection::Connection as XConnection;
-use x11rb::protocol::xproto::{ConnectionExt, CreateWindowAux, ImageFormat, WindowClass};
+use image::EncodableLayout;
+use quinn::{Connection, ReadExactError};
+use tokio::task;
+use tokio::time::interval;
+use x11rb::protocol::damage::{ConnectionExt as XConnectionExt};
+use x11rb::protocol::xproto::ConnectionExt;
+use crate::display::RrdpDisplay;
+use crate::errors::connection_errors::ConnectionError;
+use crate::rd::serialize_image;
 
-pub async fn simple_handler(connection: Connection) -> Result<(), ()>{
-    println!("[server] connesso nuovo client - ip: {:?}", connection.remote_address());
-    Ok(())
+pub trait Handle{
+    async fn handle_connection(&self, connection: Connection)
+        -> Pin<Box<dyn Future<Output = Result<(), ConnectionError>> + Send>>;
 }
 
-pub async fn handle_connection(mut new_conn: Connection) -> anyhow::Result<()> {
-    println!("New connection: {}", new_conn.remote_address());
 
-    // Handle incoming bidirectional streams
-    let (send, recv) = new_conn
-        .open_bi()
-        .await?;
+pub struct RrdpHandler{
 
-    tokio::spawn(send_image(send, recv));
-
-    Ok(())
 }
 
-pub(crate) async fn get_image() -> Result<DynamicImage, String>{
-    let res  = x11rb::connect(None);
-    match res {
-        Ok((conn, screen_num)) => {
-            let screen = &conn.setup().roots[screen_num];
-            let win_id = conn.generate_id().unwrap();
-            conn.create_window(
-                24,
-                win_id,
-                screen.root,
-                0,
-                0,
-                1024,
-                768,
-                0,
-                WindowClass::INPUT_OUTPUT,
-                screen.root_visual,
-                &CreateWindowAux::new().background_pixel(screen.white_pixel),
-            ).unwrap();
-
-            conn.map_window(win_id).unwrap();
-            let _ = conn.flush();
-            // Take a screenshot
-            let image = conn.get_image(
-                ImageFormat::Z_PIXMAP,
-                screen.root,
-                0,
-                0,
-                1024,
-                768,
-                !0,
-            ).unwrap().reply().unwrap();
-
-            // Save the screenshot to a file
-            let buffer = image.data;
-            let image: ImageBuffer<image::Rgba<u8>, Vec<u8>> = ImageBuffer::from_raw(screen.width_in_pixels as u32, screen.height_in_pixels as u32, buffer).unwrap();
-            return Ok(DynamicImage::from(image))
-
-        }
-        Err(e) => {
-            println!("{:?}", e);
-            return Err(e.to_string());
-        }
+impl RrdpHandler {
+    pub fn new() -> Self {
+        Self {}
     }
 
-}
+    fn _login(self){
 
-fn get_image2(path: &str)->Result<DynamicImage, String>{
-    let img = ImageReader::open(path);
-    return match img {
-        Ok(_) => {
-            match img.unwrap().decode() {
-                Ok(img) => {
-                    Ok(img)
-                },
-                Err(e) => Err(format!("Errore nel caricamento dell'immagine: {:?}", e)),
-            }
-        }
-        Err(e) => Err(format!("Errore nel caricamento dell'immagine: {:?}", e)),
     }
 }
 
-pub async fn send_image(mut send: quinn::SendStream, mut recv: quinn::RecvStream) -> anyhow::Result<()> {
-
-    let mut interval = tokio::time::interval(Duration::from_secs(3));
-
-    loop {
-        interval.tick().await; // Aspetta il prossimo tick dell'intervallo
-
-
-        // Prova a inviare il messaggio
-        let path = "tmp/test.png";  // Sostituisci con il percorso corretto dell'immagine
-        match get_image().await {
-            Ok(img) =>{
-                println!("{:?}", img.as_bytes().len());
-                if let Err(e) = send.write_all(img.as_bytes()).await {
-                    println!("Error sending message: {}", e);
+impl Handle for RrdpHandler{
+    async fn handle_connection(&self, connection: Connection)
+        -> Pin<Box<dyn Future<Output = Result<(), ConnectionError>> + Send>> {
+        Box::pin(async move {
+            // Simuliamo una operazione asincrona
+            let (mut send, mut recv) = match connection.open_bi().await{
+                Ok((send, recv)) => (send, recv),
+                Err(err) => {
+                    return Err(ConnectionError::OpenBiError(err.to_string()))
                 }
-            },
-            Err(e)=>{
+            };
 
+            // TODO: unify display
+
+            // Gestione input
+            tokio::spawn(async move {
+
+                let display = match RrdpDisplay::new(None){
+                    Ok(display) => display,
+                    Err(err) => {println!("Error"); panic!()}       // TODO: gestione errori
+                };
+
+
+                loop {
+
+                    let mut type_byte = [0u8; 1];
+                    let n = recv.read(&mut type_byte).await;
+
+                    let packet_type = u8::from_le_bytes(type_byte);
+
+
+                    if packet_type == 0{
+                        let mut bytes = [0u8; 8];
+                        let n = recv.read(&mut bytes).await;
+                        // TODO modificare lettura (primo byte per capire il tipo di pacchetto e quanti altri bytes leggere. Vedi lettura immagini)
+                        let x = i32::from_le_bytes([bytes[0], bytes[1], bytes[2], bytes[3]]);
+                        let y = i32::from_le_bytes([bytes[4], bytes[5], bytes[6], bytes[7]]);
+
+                        if x!=0 && y!=0{
+                            display.warp_pointer(
+                                x as i16, y as i16
+                            );
+                        }
+                    } else if packet_type==1 {
+                        let mut button = [0u8; 1];
+                        let n = recv.read(&mut button).await;
+                        let button_num = u8::from_le_bytes(button);
+                        display.press_button(button_num);
+                        // display.press_keyboard();
+
+                    }
+
+                    else if packet_type==2 {
+                        let mut button = [0u8; 1];
+                        let n = recv.read(&mut button).await;
+                        let button_num = u8::from_le_bytes(button);
+                        display.release_button(button_num);
+                    }
+
+                    else if packet_type==3 {
+                        let mut buf = [0u8; 1];
+                        let n = recv.read(&mut buf).await;
+                        let len = u8::from_le_bytes(buf);
+
+                        let mut buf = vec![0u8; len as usize];
+
+                        match recv.read_exact(&mut buf).await{
+                            Ok(_) => {
+                                for byte in &buf {
+                                    display.press_keyboard(*byte);
+                                }
+
+                                for byte in &buf {
+                                    display.release_keyboard(*byte);
+                                }
+                            }
+                            Err(_) => {}
+                        }
+
+                        // press tastiera
+                    }
+
+                }
+
+
+            });
+
+
+
+            // Gestione output
+
+            let mut display = match RrdpDisplay::new(None){
+                Ok(display) => display,
+                Err(_) => {panic!()}            // TODO gestione errore
+            };
+
+            let damage_id = display.setup_damage();
+            display.set_event_mask();
+
+            // Acquisisci l'intera schermata e inviala subito dopo la connessione
+            let full_image = &display.get_full_image().await.unwrap();
+            let binding = serialize_image(&full_image);
+            let bytes = binding.as_bytes();
+            send.write_all(&bytes).await.unwrap();
+
+            let mut interval = interval(Duration::from_millis(10));
+
+
+
+            loop {
+                interval.tick().await;
+                let damage_events = display.fetch_damage_events().unwrap();
+                if !damage_events.is_empty() {
+                    let bounding_box = display.calculate_bounding_box(&damage_events);
+                    let mut width = bounding_box.width;
+                    let mut height = bounding_box.height;
+                    let mut start_x = bounding_box.x;
+                    let mut start_y = bounding_box.y;
+
+                    // Processa qui l'ultimo damage notify
+                    let img = display.get_image(
+                        start_x, start_y,
+                        width, height
+                    ).await.unwrap();       // TODO: gestione errori
+
+                    let bytes = serialize_image(&img);
+
+                    send.write_all(bytes.as_bytes()).await.unwrap();
+
+                    // Riparare il danno
+                    let _ = display.damage_subtract();      // TODO: gestione errori
+
+                }
             }
-        }
 
-        println!("Sendede");
-        // Verifica se il client ha chiuso la connessione
 
+            Ok(())
+        })
     }
-    send.finish().await?;
-    println!("Stream finished");
-    Ok(())
 }
-
-
-pub async fn ping(mut send: quinn::SendStream, mut recv: quinn::RecvStream) -> anyhow::Result<()> {
-    // Creazione di un intervallo di un secondo
-    let mut interval = tokio::time::interval(Duration::from_secs(1));
-
-    loop {
-        interval.tick().await; // Aspetta il prossimo tick dell'intervallo
-        let message = "Hello from server!\n";
-
-
-        // Prova a inviare il messaggio
-        if let Err(e) = send.write_all(message.as_bytes()).await {
-            println!("Error sending message: {}", e);
-            break;
-        }
-
-        println!("Sendede");
-
-        // Verifica se il client ha chiuso la connessione
-
-    }
-    send.finish().await?;
-    println!("Stream finished");
-    Ok(())
-}
-

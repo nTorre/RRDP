@@ -7,7 +7,6 @@ mod configs;
 mod rd;
 
 use std::fs;
-use handlers::handle_connection;
 use std::sync::Arc;
 use log::{error, info, warn};
 use quinn::{Endpoint, ServerConfig as QuinnServerConfig};
@@ -18,7 +17,7 @@ use crate::cryptography::config_server_security;
 use crate::errors::config_errors::ConfigError;
 use crate::errors::connection_errors::ConnectionError;
 use crate::errors::crypto_errors::CryptoError;
-use crate::rd::start_listening;
+use crate::rd::RrdpServer;
 
 fn main(){
 
@@ -52,12 +51,14 @@ fn main(){
 
 
     // starting server
-    match start_listening(server_crypto){
+    let rrdp_server = RrdpServer::new(server_crypto);
+    let handler = handlers::RrdpHandler::new();
+
+    match rrdp_server.start_listening(handler){
         Ok(_) => {},
         Err(err) => {
             error!("{}", err);
             panic!()
         }
     }
-
 }

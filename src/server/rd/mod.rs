@@ -5,5 +5,8 @@
 // unificare handlers e runners qui. Nel main semplice chiamata al rd::RrdpRemoteDesktop::start(config)
 // qualcosa del genere
 
-mod handle;
+pub(crate) mod handle;
+mod serializer;
+
 pub use handle::*;
+pub use serializer::*;

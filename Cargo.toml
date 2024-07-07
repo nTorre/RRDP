@@ -17,7 +17,7 @@ anyhow = "1.0.81"
 rustls-pemfile = "1.0.4"
 rustls = { version = "*", features = ["dangerous_configuration", "quic"] }
 time = "0.3.36"
-x11rb = { version = "0.13.0", features = ["xtest"] }
+x11rb = { version = "0.13.0", features = ["xtest", "damage", "composite"] }
 eframe = "0.27.2"
 egui = "0.27.2"
 egui_extras = "0.27.2"
