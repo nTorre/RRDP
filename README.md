@@ -1,7 +1,7 @@
 # QRDP - Quic RDP
 
-![image]({https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white})
-![image]({https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white})
+![image](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![image](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
 A complete Remote Desktop application for servers and clients.
 
