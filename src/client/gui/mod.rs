@@ -60,6 +60,10 @@ impl eframe::App for MyApp {
         // let primary_down = ctx.input((|i| i.pointer.primary_down()));
         let primary_pressed = ctx.input(|i| i.pointer.primary_pressed());
         let primary_released = ctx.input(|i| i.pointer.primary_released());
+
+        let secondary_pressed = ctx.input(|i| i.pointer.secondary_pressed());
+        let secondary_released = ctx.input(|i| i.pointer.secondary_released());
+
         let scroll = ctx.input(|i| i.smooth_scroll_delta);
 
         if scroll.length()!=0.{
@@ -125,6 +129,16 @@ impl eframe::App for MyApp {
         if primary_released {
             // send release
             self.mouse_press_sender.try_send((2,1));
+        }
+
+        if secondary_pressed {
+            // send press
+            self.mouse_press_sender.try_send((1,2));
+        }
+
+        if secondary_released {
+            // send release
+            self.mouse_press_sender.try_send((2,2));
         }
 
         match pos {

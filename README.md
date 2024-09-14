@@ -75,7 +75,7 @@ e tanti altri
 ## TODOs:
 
 Cose da implementare a breve:
-- gestione click mouse destro
+- sistemare codice
 - sistemare colori
 - gestione errori completa
 - prendere tutte le variabili dal file di configurazione
@@ -88,6 +88,7 @@ Cose implementabili ma non farò a breve:
 - copia incolla testo
 - combinazione tasti
 - utenti in sola lettura
+- scroll
 
 
 ## Devs things Rrdp

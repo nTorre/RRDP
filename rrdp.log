@@ -3603,3 +3603,23 @@ max_slice_size = 0
 not implemented
 ---------------------------
 [2024-07-07][15:31:27][server::cryptography][INFO] Generating certificates
+[2024-09-14][22:08:03][server::configs::functions][INFO] Parsing "rrdp.config"
+[2024-09-14][22:08:03][server][INFO] Configs:
+---------------------------
+[connection]
+generate_certs = true
+key_path = certs/key.pem
+certs_path = certs/cert.pem
+
+[display]
+custom_display = true
+display = :1
+desktop_env = Xfce4
+dimensions = (1024, 768, 24)
+max_slice_size = 0
+
+[settings]
+not implemented
+---------------------------
+[2024-09-14][22:08:03][server::cryptography][INFO] Generating certificates
+[2024-09-14][22:08:03][server::rd::handle][INFO] Server listening on 0.0.0.0:4433

@@ -66,8 +66,9 @@ impl RrdpServer{
                     Err(e) => {return Err(
                         ConnectionError::CreateConnectionError(e.to_string()))}
                 };
+                info!("New connection from {}", connection.remote_address());
                 tokio::spawn(
-                    handler.handle_connection(connection).await
+                handler.handle_connection(connection).await
                 );
             }
             Ok(())

@@ -54,7 +54,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         // Avvia il client in un altro task.
         let client_task = tokio::spawn(async {
-            let res = run_client("127.0.0.1:4433".parse().unwrap(), client_state, mouse_client_state, mouse_press_client_state, keyboard_client_state).await;
+            let res = run_client("38.60.249.227:4433".parse().unwrap(), client_state, mouse_client_state, mouse_press_client_state, keyboard_client_state).await;
             println!("{:?}", res);
         });
 

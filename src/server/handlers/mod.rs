@@ -35,7 +35,6 @@ impl Handle for RrdpHandler{
     async fn handle_connection(&self, connection: Connection)
         -> Pin<Box<dyn Future<Output = Result<(), ConnectionError>> + Send>> {
         Box::pin(async move {
-            // Simuliamo una operazione asincrona
             let (mut send, mut recv) = match connection.open_bi().await{
                 Ok((send, recv)) => (send, recv),
                 Err(err) => {
@@ -80,7 +79,6 @@ impl Handle for RrdpHandler{
                         let button_num = u8::from_le_bytes(button);
                         display.press_button(button_num);
                         // display.press_keyboard();
-
                     }
 
                     else if packet_type==2 {
